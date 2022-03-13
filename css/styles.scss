@@ -8,4 +8,78 @@ $DarkBlue: hsl(218, 23%, 16%);
 
 *, *::before, *::after{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Manrope', sans-serif;
+  background-color: $DarkBlue;
+  color: $txt-col;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.advice{
+  &__container{
+
+    position: relative;
+  }
+  &__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $DarkGrayishBlue;
+    padding: 1.4rem 1.4rem 4rem;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px -25px black;
+    h1{
+      color: $primary;
+      font-size: 1rem;
+      padding: .5rem 0;
+      font-weight: normal;
+    }
+    p{
+      font-size: 2rem;
+      text-align: center;
+      padding: 1rem 0 2rem;
+    }
+  }
+  &__btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+    background-color: $primary;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 0px 0 $primary;
+    transition: .2s box-shadow ease-in-out;
+    &:hover{
+      box-shadow: 0 0 20px 0 $primary;
+    }
+  }
 }
